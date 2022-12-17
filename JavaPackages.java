@@ -14,12 +14,12 @@ import mypackages.*; // Import user defined mypackages packages
 
 public class JavaPackages {
     public static void main(String[] args) {
-        Scanner myObj = new Scanner(System.in);// init a scanner from java.util packages
-        System.out.println("Enter username");
+        try (Scanner myObj = new Scanner(System.in)) {
+            System.out.println("Enter username");
 
-        String userName = myObj.nextLine(); // use nextLine() method from scanner object.
-        System.out.println("Username you input is: " + userName);
-
+            String userName = myObj.nextLine(); // use nextLine() method from scanner object.
+            System.out.println("Username you input is: " + userName);
+        }
         /* 
          * Create and use User Defined Packages
          * mypackages\MyPackageClass.java
